@@ -1,4 +1,32 @@
-# Bubble Sort
+# Bubble Sort Algorithm
+
+"""
+Bubble Sort Algorithm
+
+Bubble Sort is a simple, comparison-based sorting algorithm that repeatedly
+swaps adjacent elements if they are in the wrong order. This process continues
+until the entire list is sorted.
+
+How It Works:
+-------------
+1. Start at the first element and compare it with the next element.
+2. Swap them if they are in the wrong order.
+3. Move to the next adjacent pair and repeat this process for the entire list.
+4. After each full pass, the largest unsorted element is placed at its correct position.
+5. Repeat this process until no swaps are needed, meaning the list is sorted.
+
+Time Complexity:
+----------------
+- Worst Case: O(n²) (when the list is in reverse order)
+- Best Case: O(n) (when the list is already sorted)
+- Average Case: O(n²)
+
+Space Complexity:
+-----------------
+- O(1) (since Bubble Sort is an in-place sorting algorithm)
+
+"""
+
 def bubble_sort(elements):
     elements_size = len(elements) # Get the size of the elements
 
