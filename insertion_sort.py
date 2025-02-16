@@ -27,3 +27,24 @@ Space Complexity:
 - O(1) (since Insertion Sort sorts the list in place)
 
 """
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)): # Loop through the array starting from the second element
+        key = arr[i] # Get the current element
+        j = i - 1
+
+        # Move elements of arr[0..i-1] that are greater than key to one position ahead of their current position
+        while j >= 0 and key < arr[j]: # Loop through the sorted sublist
+            arr[j + 1] = arr[j] # Shift the elements to the right
+            j -= 1
+
+        arr[j + 1] = key # Insert the key into its correct position
+
+
+# Test the Function
+if __name__ == "__main__":
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    print("Original Array:", arr)
+
+    insertion_sort(arr)
+    print("Sorted Array:", arr)
